@@ -41,8 +41,8 @@ public class ReservaController {
 		
 		
 		reserva.setLibro(libroService.save(libroAux));
-		System.out.println(reserva.getFechaDevolucion());
-		Reserva re = reservaService.save(reserva);
-		return ResponseEntity.status(HttpStatus.CREATED).body(re);
+
+	
+		return ResponseEntity.status(HttpStatus.CREATED).body(reservaService.save(reserva));
 	}
 }
